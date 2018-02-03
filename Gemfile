@@ -10,7 +10,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 gem 'sqlite3'
-gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'capybara', '~> 2.13'
