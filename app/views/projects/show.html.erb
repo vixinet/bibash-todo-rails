@@ -12,3 +12,22 @@
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
+
+<hr />
+
+<h4>Todos</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Label</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @project.todos %>
+  </tbody>
+</table>
+
+<%= link_to 'New Todo', new_todo_path %>

@@ -1,2 +1,8 @@
 <h1>Welcome</h1>
 <p>Welcome to static page</p>
+
+<br>
+
+<%= link_to 'projects', projects_path %>
+<p>Currently we have <%= pluralize(Project.total, "project") %>.</p>
+<p>We currently have <%= pluralize(Todo.total, "todo") %> in <%= Project.total %> project. </p>
