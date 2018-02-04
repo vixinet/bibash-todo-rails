@@ -28,6 +28,7 @@ This project aims at going through all rails specificities through a step by ste
 - [ ] relations has_one
 - [ ] relations has_many
 - [ ] relations has_and_belongs_to_many
+- [ ] relation through
 - [ ] Assets pipeline
 - [ ] Helpers
 - [ ] CRF tokens
@@ -60,8 +61,22 @@ This project aims at going through all rails specificities through a step by ste
 1. Display the `todos` of a `Project` in the `Project#index` endpoint
 1. Generate a migration to add `priority` attribute to `Todo` as a `integer`
 1. Declare this field as an `enum` in `Todo` model with the possible values of `:high`, `:medium`, `:low`
-1. 
-
-
+1. Add the class method `total` to `Project` in order to get `Project.total` returning the amount of projects in the data base
+1. Add the class method `total` to `Todo` in order to get `Todo.total` returning the amount of todos in the data base
+1. The sentence `We currently have n todos within n projects` to the home page. Both `n` should refer to the newly created class methods and `todos` and `projects` should plurialize according to the amount.
+1. Do training (1) listed below if you need a refresh of the points we went trough.
+1. Create a model `Task` with fields `done` as a `boolean`, `label` as a `string`, `todo` as a reference
+1. Test `label` is present
+1. Test `label` is unique through the `Todo`
+1. Test `todo` is required
+1. Test `done` is `false` at creation
+1. Test `Task` gets deleted when we delete parent `Todo`
+1. Test `project` is exists
+1. Test `Task` gets deleted when we delete parent `Project`
+1. Generate a mailer `ProjectMailer` with `notify_admin` sending an email saying `New project NAME was created. Accese HERE` where NAME is the name of the project and HERE is a url to the project.
+1. Call the mailer from `project#create` when the creation is a success
+1. Add a method `open_tasks` to `Todo` returning  the current open tasks in it
+1. Add a method `open_tasks` to `Todo` returning a `booblean` regarding if it still has open tasks
+1. Change the `destroy` method of `todo` to raise an `StandardError` when we try to delete a `Todo` with open `tasks`
 
 
