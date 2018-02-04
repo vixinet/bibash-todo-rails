@@ -3,36 +3,35 @@
 This project aims at going through all rails specificities through a step by step project. Each steps increments in complexitiy.
 
 ## Area to discover
-- [ ] bundle cli
-- [ ] rails cli
-- [ ] rails console
-- [ ] rails server
-- [ ] Github basics
-- [ ] Controllers
-- [ ] Models
-- [ ] Migrations
-- [ ] Views
-- [ ] Partials
-- [ ] Helpers
-- [ ] Routing
+- [x] bundle cli
+- [x] rails cli
+- [x] rails console
+- [x] rails server
+- [x] Github basics
+- [x] Controllers
+- [x] Models
+- [x] Migrations
+- [x] Views
+- [x] Partials
+- [x] Helpers
+- [x] Routing
 - [ ] Tasks
-- [ ] Mailers
+- [x] Mailers
 - [ ] Device
 - [ ] Filtering data
 - [ ] Slug (to_param, to_slug)
-- [ ] Class methods
-- [ ] Object methods
-- [ ] TDD
-- [ ] Validations
-- [ ] relations belongs_to
+- [x] Class methods
+- [x] Object methods
+- [x] TDD
+- [x] Validations
+- [x] relations belongs_to
 - [ ] relations has_one
-- [ ] relations has_many
+- [x] relations has_many
 - [ ] relations has_and_belongs_to_many
-- [ ] relation through
-- [ ] Assets pipeline
-- [ ] Helpers
+- [x] relation through
+- [x] Assets pipeline
 - [ ] CRF tokens
-- [ ] Data query (.all, .where, .where.not, .order, etc)
+- [x] Data query (.all, .where, .where.not, .order, etc)
 
 ## Taks
 1. Create a new project `rails new`
@@ -78,5 +77,7 @@ This project aims at going through all rails specificities through a step by ste
 1. Add a method `open_tasks` to `Todo` returning  the current open tasks in it
 1. Add a method `open_tasks` to `Todo` returning a `booblean` regarding if it still has open tasks
 1. Change the `destroy` method of `todo` to raise an `StandardError` when we try to delete a `Todo` with open `tasks`
-
-
+1. Add 3 images representing `:high`, `:medium`, `:low` priority
+1. Display the image corresponding the `priority` of a `Todo` from the assets in the corresponding views
+1. Move the code you just wrote to `todos_helper.rb`
+1. Add a logo to the `public` folder and display it on every page
