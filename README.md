@@ -32,6 +32,8 @@ This project aims at going through all rails specificities through a step by ste
 - [x] Assets pipeline
 - [ ] CRF tokens
 - [x] Data query (.all, .where, .where.not, .order, etc)
+- [ ] STI
+- [ ] Shallow routing
 
 ## Taks
 1. Create a new project `rails new`
