@@ -31,3 +31,18 @@
 </table>
 
 <%= link_to 'New Todo', new_todo_path %>
+
+<h4>Milestones</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Label</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @project.milestones %>
+  </tbody>
+</table>
