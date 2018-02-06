@@ -44,7 +44,7 @@
   </thead>
 
   <tbody>
-    <%= render @project.milestones %>
+    <%= render @project.milestones.order(deadline: :asc) %>
   </tbody>
 </table>
 
