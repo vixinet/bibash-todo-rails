@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+reshel = Project.create( name: "Reshel" ) 
+lawyers = Project.create( name: "Lawyers" )
+
+Todo.create( name: "Administration", project: reshel)
+Todo.create( name: "Business", project: reshel)
+Todo.create( name: "Dev", project: reshel)
+
+Todo.create( name: "Admin", project: lawyers)
+Todo.create( name: "Dev", project: lawyers)
