@@ -34,6 +34,8 @@ This project aims at going through all rails specificities through a step by ste
 - [x] Data query (.all, .where, .where.not, .order, etc)
 - [ ] STI
 - [ ] Shallow routing
+- [ ] Destroy cascade
+- [ ] Destroy nullify
 
 ## Taks
 1. Create a new project `rails new`
