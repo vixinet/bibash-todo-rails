@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :milestones
+  resources :milestones, except: [:index]
   resources :todos, except: [:index, :show]
 
   root "static_pages#home"
