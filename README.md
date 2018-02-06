@@ -83,3 +83,17 @@ This project aims at going through all rails specificities through a step by ste
 1. Display the image corresponding the `priority` of a `Todo` from the assets in the corresponding views
 1. Move the code you just wrote to `todos_helper.rb`
 1. Add a logo to the `public` folder and display it on every page
+
+## Training (1)
+1. Scaffold `Milestone` which as a `label`, a `deadline` and belongs to a `project`
+1. All fields are required to create a `Milestone`
+1. In a project the `show` view displays all milestones
+1. Order them to see first the next in line (or past if one exists)
+1. Add `status` attribute to a `Project` with the `enum` values `:open`, `:close`
+1. The default status when creating a new project is `:open`
+1. `milestone.active?` should return `true` if the project is `:open` or `false` if the project isn't `:open`
+1. Scaffold `Label` ressource which has a `label`, and a `color`
+1. Validate the `label` is present
+1. Validate the `color` is in the format `#FFF` or `#FFFFFF`. `F` being an hecadecimal value `0-9A-Fa-F`
+1. a label can be part of many projects
+1. a project can have many labels
