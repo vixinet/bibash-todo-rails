@@ -3,6 +3,7 @@ class Project < ApplicationRecord
   validates :rating, :inclusion => { :in => 1..5 }, :allow_nil => true
 
   has_many :todos
+  has_many :milestones
   
   def to_s
     "project #{name}"

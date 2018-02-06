@@ -23,7 +23,8 @@
 
   <div class="field">
     <%= form.label :project_id %>
-    <%= form.text_field :project_id, id: :milestone_project_id %>
+
+    <%= form.collection_select(:project_id, Project.all.order(:name), :id, :name, id: :todo_project_id )%>
   </div>
 
   <div class="actions">
