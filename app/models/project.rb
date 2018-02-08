@@ -2,6 +2,8 @@ class Project < ApplicationRecord
   validates :name, presence: true
   validates :rating, :inclusion => { :in => 1..5 }, :allow_nil => true
 
+  enum status: [:open, :close] 
+
   has_many :todos
   has_many :milestones
   
