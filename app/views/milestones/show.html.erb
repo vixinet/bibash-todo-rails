@@ -12,7 +12,22 @@
 
 <p>
   <strong>Project:</strong>
-  <%= @milestone.project %>
+  <%= link_to @milestone.project.name, @milestone.project %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @milestone.active? %>
+</p>
+
+<p>
+  <strong>Active second:</strong>
+  <%= @milestone.active_second? %>
+</p>
+
+<p>
+  <strong>Active third:</strong>
+  <%= @milestone.active_third? %>
 </p>
 
 <%= link_to 'Edit', edit_milestone_path(@milestone) %> |
