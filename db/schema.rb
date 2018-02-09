@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180209092015) do
+ActiveRecord::Schema.define(version: 20180209110703) do
 
   create_table "labels", force: :cascade do |t|
     t.string "label"
@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(version: 20180209092015) do
     t.datetime "updated_at", null: false
     t.float "rating"
     t.integer "status"
+  end
+
+  create_table "projects_labels", id: false, force: :cascade do |t|
+    t.integer "project_id"
+    t.integer "label_id"
+    t.index ["label_id"], name: "index_projects_labels_on_label_id"
+    t.index ["project_id"], name: "index_projects_labels_on_project_id"
   end
 
   create_table "todos", force: :cascade do |t|

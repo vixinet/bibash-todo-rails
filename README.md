@@ -97,5 +97,15 @@ This project aims at going through all rails specificities through a step by ste
 1. Scaffold `Label` ressource which has a `label`, and a `color`
 1. Validate the `label` is present
 1. Validate the `color` is in the format `#FFF` or `#FFFFFF`. `F` being an hecadecimal value `0-9A-Fa-F`
-1. a label can be part of many projects
-1. a project can have many labels
+1. a `Label` can be part of many `projects` a `Project` can have many `labels` (use `has_and_belongs_to_many` relation)
+1. Add a column `Labels` in the `index` view of `Projects` showing the amount of labels related to the `Project`
+1. List all `labels` related to the `Project` in the `show` view of `Projects`
+1. The background of a label cell should be the color defined in the label
+1. List all `projects` related to the `Label` in the `show` view of `Labels`
+1. The route `/labels` should not be accessible anymore
+1. Remove the field `description` from the project in the interface and the database
+1. The Project field `status` must be editable through the `create` and `edit` forms
+1. Display the Project's `rating` in the `show` view
+
+
+

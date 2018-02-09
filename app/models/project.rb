@@ -6,6 +6,7 @@ class Project < ApplicationRecord
 
   has_many :todos
   has_many :milestones
+  has_and_belongs_to_many :labels
 
   after_initialize :set_defaults
   
