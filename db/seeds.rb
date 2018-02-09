@@ -9,9 +9,9 @@
 reshel = Project.create( name: "Reshel" ) 
 lawyers = Project.create( name: "Lawyers" )
 
-Todo.create( name: "Administration", project: reshel)
-Todo.create( name: "Business", project: reshel)
-Todo.create( name: "Dev", project: reshel)
+Todo.create( label: "Administration", project: reshel)
+Todo.create( label: "Business", project: reshel)
+Todo.create( label: "Dev", project: reshel)
 
-Todo.create( name: "Admin", project: lawyers)
-Todo.create( name: "Dev", project: lawyers)
+Todo.create( label: "Admin", project: lawyers)
+Todo.create( label: "Dev", project: lawyers)
