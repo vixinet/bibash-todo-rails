@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180208081213) do
+ActiveRecord::Schema.define(version: 20180209092015) do
+
+  create_table "labels", force: :cascade do |t|
+    t.string "label"
+    t.string "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "milestones", force: :cascade do |t|
     t.string "label"
@@ -21,8 +28,14 @@ ActiveRecord::Schema.define(version: 20180208081213) do
     t.index ["project_id"], name: "index_milestones_on_project_id"
   end
 
-# Could not dump table "projects" because of following StandardError
-#   Unknown type 'enum' for column 'status'
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "rating"
+    t.integer "status"
+  end
 
   create_table "todos", force: :cascade do |t|
     t.string "label"
