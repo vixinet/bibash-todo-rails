@@ -8,6 +8,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>Todos</th>
+      <th>Labels</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +18,8 @@
       <tr>
         <td><%= project.name %></td>
         <td><%= project.description %></td>
-        <td><%= project.todos.length %>
+        <td><%= project.todos.length %></td>
+        <td><%= project.labels.length %></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
       </tr>
