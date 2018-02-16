@@ -27,4 +27,8 @@ class Project < ApplicationRecord
       self.status ||= :open
     end
   end
+
+  def self.statuses_for_select
+    Project.statuses.map { |key, value| [key.humanize, key] } 
+  end
 end
