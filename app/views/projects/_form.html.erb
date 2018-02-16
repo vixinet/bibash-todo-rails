@@ -21,6 +21,11 @@
     <%= form.number_field :rating, id: :project_rating %>
   </div>
 
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.select :status, Project.statuses_for_select  %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
