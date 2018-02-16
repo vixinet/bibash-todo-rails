@@ -1,5 +1,5 @@
 <tr>
-  <td><%= label.label %></td>
+  <td bgcolor="<%= label.color %>"><%= label.label %></td>
   <td><%= label.color %></td>
   <td><%= link_to 'Edit', edit_label_path(label) %></td>
   <td><%= link_to 'Destroy', label, method: :delete, data: { confirm: 'Are you sure?' } %></td>
