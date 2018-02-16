@@ -12,3 +12,22 @@
 
 <%= link_to 'Edit', edit_label_path(@label) %> |
 <%= link_to 'Back', labels_path %>
+
+<h4>Projects</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @label.projects %>
+  </tbody>
+</table>
+
+<%= link_to 'New Project', new_project_path %>
