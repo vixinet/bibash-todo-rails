@@ -10,6 +10,12 @@ class Project < ApplicationRecord
 
   after_initialize :set_defaults
   
+  def set_defaults
+    if self.new_record?
+      self.status ||= :open
+    end
+  end
+
   def to_s
     "project #{name}"
   end
@@ -20,12 +26,6 @@ class Project < ApplicationRecord
 
   def self.total
     Project.all.size
-  end
-
-  def set_defaults
-    if self.new_record?
-      self.status ||= :open
-    end
   end
 
   def self.statuses_for_select
