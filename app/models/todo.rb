@@ -2,6 +2,7 @@ class Todo < ApplicationRecord
   validates :label, presence: true
 
   belongs_to :project
+  has_many :tasks, dependent: :destroy
 
   enum priority: [:high, :normal, :low]
 
