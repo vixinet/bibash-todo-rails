@@ -27,14 +27,14 @@ This project aims at going through all rails specificities through a step by ste
 - [x] relations belongs_to
 - [ ] relations has_one
 - [x] relations has_many
-- [ ] relations has_and_belongs_to_many
+- [x] relations has_and_belongs_to_many
 - [x] relation through
 - [x] Assets pipeline
 - [ ] CRF tokens
 - [x] Data query (.all, .where, .where.not, .order, etc)
 - [ ] STI
 - [ ] Shallow routing
-- [ ] Destroy cascade
+- [x] Destroy cascade
 - [ ] Destroy nullify
 
 ## Taks
@@ -68,13 +68,13 @@ This project aims at going through all rails specificities through a step by ste
 1. Add the class method `total` to `Todo` in order to get `Todo.total` returning the amount of todos in the data base
 1. The sentence `We currently have n todos within n projects` to the home page. Both `n` should refer to the newly created class methods and `todos` and `projects` should plurialize according to the amount.
 1. Do training (1) listed below if you need a refresh of the points we went trough.
-1. Create a model `Task` with fields `done` as a `boolean`, `label` as a `string`, `todo` as a reference
+1. Scaffold a resource `Task` with fields `done` as a `boolean`, `label` as a `string`, `todo` as a reference
 1. Test `label` is present
 1. Test `label` is unique through the `Todo`
 1. Test `todo` is required
 1. Test `done` is `false` at creation
 1. Test `Task` gets deleted when we delete parent `Todo`
-1. Test `project` is exists
+1. Test `project` exists (has_one through)
 1. Test `Task` gets deleted when we delete parent `Project`
 1. Generate a mailer `ProjectMailer` with `notify_admin` sending an email saying `New project NAME was created. Accese HERE` where NAME is the name of the project and HERE is a url to the project.
 1. Call the mailer from `project#create` when the creation is a success
