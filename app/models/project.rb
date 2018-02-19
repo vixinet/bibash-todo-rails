@@ -4,8 +4,8 @@ class Project < ApplicationRecord
 
   enum status: [:open, :close] 
 
-  has_many :todos
-  has_many :milestones
+  has_many :todos, dependent: :destroy
+  has_many :milestones, dependent: :destroy
   has_and_belongs_to_many :labels
 
   after_initialize :set_defaults
@@ -21,7 +21,7 @@ class Project < ApplicationRecord
   end
 
   def self.with_todos
-    Project.where id: Todo.all.map(&:project_id)
+    Project.where(id: Todo.all.map(&:project_id))
   end
 
   def self.total
