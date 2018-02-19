@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :tasks
   resources :labels, except: [:index]
   resources :milestones, except: [:index]
   resources :todos, except: [:index, :show]

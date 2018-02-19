@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Done:</strong>
+  <%= @task.done %>
+</p>
+
+<p>
+  <strong>Label:</strong>
+  <%= @task.label %>
+</p>
+
+<p>
+  <strong>Todo:</strong>
+  <%= @task.todo %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
