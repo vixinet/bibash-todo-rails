@@ -66,10 +66,11 @@ class ProjectTest < ActiveSupport::TestCase
   end
 
   test "should have total returning a value" do
-    create(:project)
-    create(:project)
-    create(:project)
-    assert_equal 3, Project.total
+    assert_difference 'Project.total', 3 do 
+      create(:project)
+      create(:project)
+      create(:project)
+    end
   end
 
   test "should respond to statuses_for_select" do

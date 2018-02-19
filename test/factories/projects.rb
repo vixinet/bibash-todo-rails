@@ -33,9 +33,3 @@ FactoryBot.define do
     end
   end
 end
-
-
-Project.create(name: 'dsada')
-Project.create(:name => 'dsada')
-Project.create :name => 'dsada'
-Project.create name: 'dsada'
