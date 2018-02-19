@@ -52,7 +52,4 @@ class LabelTest < ActiveSupport::TestCase
       label.projects.first.destroy
     end
   end
-
-  # test github
-  # test github bis
 end
