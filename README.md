@@ -106,6 +106,3 @@ This project aims at going through all rails specificities through a step by ste
 1. Remove the field `description` from the project in the interface and the database
 1. The Project field `status` must be editable through the `create` and `edit` forms
 1. Display the Project's `rating` in the `show` view
-
-
-
