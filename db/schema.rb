@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180216134435) do
+ActiveRecord::Schema.define(version: 20180219154750) do
 
   create_table "labels", force: :cascade do |t|
     t.string "label"
@@ -41,6 +41,15 @@ ActiveRecord::Schema.define(version: 20180216134435) do
     t.datetime "updated_at", null: false
     t.float "rating"
     t.integer "status"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.boolean "done"
+    t.string "label"
+    t.integer "todo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["todo_id"], name: "index_tasks_on_todo_id"
   end
 
   create_table "todos", force: :cascade do |t|
