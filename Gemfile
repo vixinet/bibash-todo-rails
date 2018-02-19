@@ -16,6 +16,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'factory_bot_rails'
   gem 'webmock'
+  gem 'minitest', ' 5.10.3'
 end
 
 group :development do
