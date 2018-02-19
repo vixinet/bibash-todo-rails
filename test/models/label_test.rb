@@ -54,4 +54,5 @@ class LabelTest < ActiveSupport::TestCase
   end
 
   # test github
+  # test github bis
 end
