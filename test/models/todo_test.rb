@@ -60,4 +60,6 @@ class TodoTest < ActiveSupport::TestCase
       todo.project.destroy
     end
   end
+
+  # TODO implement has many tasks
 end
