@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :todo do
-    label "MyString"
-    project nil
+    label "Clean database"
+    project
   end
 end
