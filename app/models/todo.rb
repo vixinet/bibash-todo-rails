@@ -17,4 +17,8 @@ class Todo < ApplicationRecord
   def self.total
     Todo.all.size
   end
+
+  def open_tasks
+    self.tasks.where(done: false)
+  end
 end

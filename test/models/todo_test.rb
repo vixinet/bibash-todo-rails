@@ -47,6 +47,25 @@ class TodoTest < ActiveSupport::TestCase
     assert_equal 3, Todo.total
   end
 
+  test "should respond to open_tasks" do
+    assert_respond_to build(:todo), :open_tasks
+  end
+
+  test "should have open_tasks returning a value" do
+    todo = create(:todo)
+
+    first_task = nil
+    second_task = nil
+    
+    assert_difference 'Task.count', 2 do
+      first_task = create(:task, todo: todo, label: "label1", done: false)
+      second_task = create(:task, todo: todo, label: "label2", done: true)
+    end
+
+    assert_includes todo.open_tasks, first_task
+    assert_not_includes todo.open_tasks, second_task
+  end
+
   test "should be destroyable" do
     todo = create(:todo)
     assert_difference 'Todo.count', -1 do 
